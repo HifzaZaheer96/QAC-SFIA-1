@@ -1,0 +1,32 @@
+
+{% extends "layout.html" %}
+
+{% block body %}
+
+<style>
+
+</style>
+
+   
+      
+    
+
+
+    <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+    <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+    <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+    <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+ 
+    
+
+
+      {% for post in posts %}
+      <div>
+          <h3>{{post.title}}</h3>
+          <p><b> - First name:</b>{{ post.name.first}}</p>
+          <p><b> - Last name:</b>{{ post.name.last}}</p>
+          <p> --{{ post.content}}</p>
+      </div>
+      {% endfor %}
+    {% endblock %}
+

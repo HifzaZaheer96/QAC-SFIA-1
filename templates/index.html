@@ -1,0 +1,374 @@
+
+{% extends "layout.html" %}
+
+{% block body %}
+
+<style>
+ /* Make the image fully responsive */
+.carousel-inner {
+  height: 600px;
+}
+  .carousel-item img {
+  height: 600px;
+  width:100%;
+
+}
+  .main-section
+{
+    background-color: #f1f1f1;
+    padding: 20px 20px 0px 20px;
+}
+.image-main-section
+{
+    margin-bottom:20px;
+   
+}
+.img-part
+{
+    border-radius: 5px;
+    margin:0px;
+    border:1px solid #DDDDDD;
+    background-color: #fff;
+    padding-bottom: 20px;
+    
+}
+.img-section
+{
+    padding: 5px;
+}
+.img-section img
+{
+    width: 100%;
+    height:540px;
+}
+.image-title h3
+{
+    margin:0px;
+    color:#4C4C4C;
+    padding: 15px 0px 8px 0px;
+}
+.image-description p
+{
+    color:#848484;
+}
+.add-cart-btn {
+    border-radius:0px;
+    font-size: 11px;
+}
+.createform
+{
+  width:500px;
+  padding:45px;
+}
+
+input[type=text]
+ {
+  
+  left:60px;
+  width: 500px;
+}
+
+.show-cart li {
+  display: flex;
+}
+.card {
+  margin-bottom: 20px;
+}
+.card-img-top {
+  width: 200px;
+  height: 200px;
+  align-self: center;
+}
+
+
+
+.show-cart li {
+  display: flex;
+}
+.card {
+  margin-bottom: 20px;
+}
+.card-img-top {
+  width: 200px;
+  height: 200px;
+  align-self: center;
+}
+</style>
+
+
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+      
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class = "carousel-image "src="https://gotahaveit.co.uk/wp-content/uploads/2019/06/Gotahaveit-960x400-banner-women-t-shirt-01-845x321.jpg" alt="Dress Up">
+          </div>
+          <div class="carousel-item">
+            <img class = "carousel-image " src="https://static.evans.co.uk/v1/static/json-0000156248_WK25_HP_WED_DT_Occasionjpg" alt="Shop with Us">
+          </div>
+          <div class="carousel-item">
+            <img class = "carousel-image " src="https://cdn.shopify.com/s/files/1/0218/6077/8056/files/top_banner-women-tops-2.jpg?v=1558446676" alt="Tops">
+          </div>
+        </div>
+      
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      
+      </div>
+      
+      
+       
+      
+        <!-- Large button groups (default and split) -->
+        <div class="container my-4">
+          <div class="border border-light p-3 mb-4">
+            <div class=" text-center">
+              <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Wardrobe Oragniser
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="shopclothes">Summer wardrobe</a>
+                <a class="dropdown-item" href="shopclotheswinter">Winter wardrobe</a>
+              </div>
+            </div>
+        </div>
+      </div>
+
+
+    <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+    <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+    <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+    <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+
+    
+
+    <div class="row">
+        <div class="row">
+          
+
+          
+          {% for i in info1 %}
+
+          <div class="col-md-3 col-sm-3 col-xs-12 image-main-section">
+            <div class="row img-part">
+              <div class="col-md-12 col-sm-12 colxs-12 img-section">
+                <img src="{{i[1]}}">
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 image-title">
+                <h3>{{i[2]}}</h3>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 image-size">
+                <h3>Size: {{i[3]}}</h3>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 image-price">
+                <h4>Price: £{{i[5]}}</h4>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <a href="#"  class="add-to-cart btn btn-primary">ADD TO CART</a>
+              </div>
+            </div>
+          </div>
+
+          {% endfor %}
+
+
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+
+          <!-- Shopping cart table -->
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col" class="border-0 bg-light ">
+                    <div class="p-2 px-3 text-uppercase">Product</div>
+                  </th>
+                  <th scope="col" class="border-0 bg-light">
+                    <div class="py-2 text-uppercase">Price</div>
+                  </th>
+                  <th scope="col" class="border-0 bg-light">
+                    <div class="py-2 text-uppercase">Quantity</div>
+                  </th>
+                  <th scope="col" class="border-0 bg-light">
+                    <div class="py-2 text-uppercase">Remove</div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" class="border-0">
+                    <div class="p-2">
+                      <img src="https://i.pinimg.com/originals/d4/e0/7f/d4e07fb33814fb2050da67aae88661cc.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
+                      <div class="ml-3 d-inline-block align-middle">
+                        <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">Smock Chiffon Top</a></h5><span class="text-muted font-weight-normal font-italic d-block">Category: Summer</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="border-0 align-middle"><strong>£10.00</strong></td>
+                  <td class="border-0 align-middle"><strong>1</strong></td>
+                  <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="p-2">
+                      <img src="https://img.ltwebstatic.com/images2_pi/2019/07/03/1562143662675996227_thumbnail_600x799.webp" alt="" width="70" class="img-fluid rounded shadow-sm">
+                      <div class="ml-3 d-inline-block align-middle">
+                        <h5 class="mb-0"><a href="#" class="text-dark d-inline-block">Rose-Pink T-shirt</a></h5><span class="text-muted font-weight-normal font-italic">Category: Summer</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="align-middle"><strong>£25.00</strong></td>
+                  <td class="align-middle"><strong>2</strong></td>
+                  <td class="align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="p-2">
+                      <img src="https://img.ltwebstatic.com/images3_pi/2019/09/27/1569574094d7a0820ed3b28c55ae5a8248e5a33440_thumbnail_600x.webp" alt="" width="70" class="img-fluid rounded shadow-sm">
+                      <div class="ml-3 d-inline-block align-middle">
+                        <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block">Jersey T-shirt</a></h5><span class="text-muted font-weight-normal font-italic">Category: Winter</span>
+                      </div>
+                    </div>
+                    <td class="align-middle"><strong>£8.00</strong></td>
+                    <td class="align-middle"><strong>3</strong></td>
+                    <td class="align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a>
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- End -->
+        </div>
+      </div>
+      <!-- {% for post in posts %}
+      <div>
+          <h3>{{post.title}}</h3>
+          <p><b> - First name:</b>{{ post.name.first}}</p>
+          <p><b> - Last name:</b>{{ post.name.last}}</p>
+          <p> --{{ post.content}}</p>
+      </div>
+
+    
+      {% endfor %} -->
+
+      <div class = "createform">
+      <form method="POST" action="">
+        <H1>Create New Top </H1> <br>
+        <div class="form-group row">
+          <div class = "input-group">
+            <label class = "col-sm-5 col-form-label">Top Image</label> 
+            <div class="col-sm-2">
+            <input class="form-control" type = "text" name= "tpic" /> 
+            </div>
+            
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class = "input-group">
+            <label class = "col-sm-5 col-form-label">Top Description</label> 
+            <div class="col-sm-2">
+         <input class="form-control" type = "text" name= "tname" />
+      </div>
+    </div>
+  </div>
+    <div class="form-group row">
+      <div class = "input-group">
+        <label class = "col-sm-5 col-form-label">Top Size</label>
+        <div class="col-sm-2">
+         <input class="form-control" type = "text" name = "tsize" /> 
+        </div>
+        
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class = "input-group">
+        <label class = "col-sm-5 col-form-label">Top Color</label>
+        <div class="col-sm-2">
+          <input class="form-control" type = "text" name = "tc" /> 
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class = "input-group">
+        <label class = "col-sm-5 col-form-label">Wardrobe ID</label>
+        <div class="col-sm-2">
+          <input class="form-control" type = "text" name = "wid" />
+        </div>
+        
+      </div>
+    </div>
+        <input  class="btn btn-primary" type = "submit">
+     
+      </form>
+     </div>
+
+     
+    <div class = "createform">
+    <form method="POST"  action="{{ url_for('account_delete') }}">
+      <H1>Delete your Top </H1> <br>
+      <div class="form-group row">
+        <div class = "input-group">
+          <label class = "col-sm-5 col-form-label">Top Description</label>
+          <div class="col-sm-2">
+            <input class="form-control" type = "text" name= "tname" /> 
+          </div>
+     
+  </div>
+</div>
+<button  class="btn btn-primary" type="submit">Delete</button><br>
+    <div class="alert alert-primary alert-dismissible"role="alert"> 
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <span>{{ delete }}</span>
+      </div>
+  </form>
+</div>
+<div class = "createform">
+  <form method="POST" action="{{ url_for('account_update') }}">
+     
+    <H1>Update your Top </H1> <br>
+    <div class="form-group row">
+      <div class = "input-group">
+        <label class = "col-sm-5 col-form-label">Top Description</label>
+        <div class="col-sm-2">
+         <input class="form-control"  type = "text" name= "tname" />
+        </div>
+  </div>
+</div>
+<div class="form-group row">
+  <div class = "input-group">
+    <label class = "col-sm-5 col-form-label">Top Size</label>
+    <div class="col-sm-2">
+     <input class="form-control"   type = "text" name = "tsize" /> 
+    </div>
+     
+  </div>
+</div>
+    <button  class="btn btn-primary" type="submit">Update </button>
+    <div class="alert alert-primary alert-dismissible " role="alert">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> 
+ <span>{{ message }}</span>
+</div>
+  </form>
+</div>
+
+    {% endblock %}
+

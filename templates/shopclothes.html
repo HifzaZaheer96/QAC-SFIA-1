@@ -1,0 +1,83 @@
+<style>
+  .main-section
+{
+    background-color: #f1f1f1;
+    padding: 20px 20px 0px 20px;
+}
+.image-main-section
+{
+    margin-bottom:20px;
+   
+}
+.img-part
+{
+    border-radius: 5px;
+    margin:0px;
+    border:1px solid #DDDDDD;
+    background-color: #fff;
+    padding-bottom: 20px;
+    
+}
+.img-section
+{
+    padding: 5px;
+}
+.img-section img
+{
+    width: 100%;
+    height:540px;
+}
+.image-title h3
+{
+    margin:0px;
+    color:#4C4C4C;
+    padding: 15px 0px 8px 0px;
+}
+.image-description p
+{
+    color:#848484;
+}
+.add-cart-btn {
+    border-radius:0px;
+    font-size: 11px;
+}
+</style>
+
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="row">
+    <div class="row">
+      
+      {% for i in info1 %}
+
+      <div class="col-md-3 col-sm-3 col-xs-12 image-main-section">
+        <div class="row img-part">
+          <div class="col-md-12 col-sm-12 colxs-12 img-section">
+            <img src="{{i[1]}}">
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 image-title">
+            <h3>{{i[2]}}</h3>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 image-description">
+            <p>Lorem ipsum dolor sed do eiusmod tempor incididunt ut labore et ...</p>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 image-size">
+            <h3>{{i[3]}}</h3>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <a href="#" class="btn btn-success add-cart-btn">ADD TO CART</a>
+            <a href="#" class="btn btn-success add-cart-btn">VIEW DETAILS</a>
+            <a href="#" class="btn btn-success add-cart-btn">UPDATE</a>
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+
+
+    </div>
+  </div>
+
+  {% endblock %}
