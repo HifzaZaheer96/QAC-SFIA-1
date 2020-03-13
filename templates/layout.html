@@ -15,9 +15,20 @@
         <h1>HZ Shopping App <i class="fas fa-heart"></i></h1> 
       </div>
 
-<!-- A grey horizontal navbar that becomes vertical on small screens -->
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+    <ul>
+      {% for category, message in messages %}
+      <li class="alert alert-{{ category }}">{{message}}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
 
+<!-- A grey horizontal navbar that becomes vertical on small screens -->
+{% if session.login %}
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
     <!-- Links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -34,10 +45,52 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Contact</a>
-      </li>
-    </ul>
   
+        
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Logout</a>
+        
+      </li>
+      
+    </ul>
   </nav>
+
+
+  {% else %}
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+
+
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">About Us </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/shopclothes">Shop Summer Clothes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/shopclotheswinter">Shop Winter Clothes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Contact</a>
+      
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/register">Register</a>
+      
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/login">Login</a>
+
+
+
+      </li>
+      </ul>
+    </nav>
+{% endif %}
 
   <div class="container-fluid"><br>
         {% block body %}{% endblock %}
@@ -46,5 +99,9 @@
         <div class="jumbotron text-center" style="margin-bottom:0">
         <p>Footer</p>
       </div>
+
+
+  
+
 </body>
 </html>
