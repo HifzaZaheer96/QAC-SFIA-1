@@ -51,4 +51,25 @@ Below is the Risk Assessment displayed in the Table:
 ![riskassessment][riskassessment]
 
 
+<a name ="architecture"></a>
+## 4. Architecture
+Before bulding the application, design stage was considered, which involved series of steps to help me define and plan my application. 
 
+## Initial ERD
+Below is the initial ERD for my project where I had minimum two tables "tops" and "wardrobe" as stated. These tables have 1 to many relationship as many tops can be stored into 1 wardrobe. 
+
+[initialerd]: https://i.imgur.com/0j3LK7H.png
+
+![initialerd][initialerd]
+
+## Final ERD
+
+This is my final ERD where I also added users table, so that only admin/authentic user can add,update and delete tops from the webiste as I don't want anyone viewing my website to make such changes and therefore, this new table was added.
+
+
+[finalerd]:
+
+![finalerd][finalerd]
+## Website Sitemap
+
+## Website Wireframe
