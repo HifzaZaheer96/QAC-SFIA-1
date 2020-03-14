@@ -42,3 +42,16 @@ To create:
 <a name ="solution"></a>
 ## My Solution
 My application is created using Boostrap, Jinja2 and Flask for the Front-End and MySQL for the Back-End Development.It is an e-commerce website where customers can shop both summer and winter tops. Depending on their requirements, they can also filter out summer and winter tops for displaying only relevant information that they are searching for, making the website user-friendly. The Admin/ Authentic user can insert new products onto the website, update their information and even delete them to accommodate the customers ever-changing demands.  
+
+<a name ="riskassessment"></a>
+## 3. Risk Assessment
+Risk Assessment was carried out to consider what could go wrong during the project and deciding on which control measures are to be taken in such situations. As a result, these control measures would help eliminate and reduce any risk involved during the project.
+
+Below is the Risk Assessment displayed in the Table:
+
+[riskassessment]: https://i.imgur.com/gZHWDUb.png
+
+![riskassessment][riskassessment]
+
+
+
