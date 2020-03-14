@@ -95,4 +95,12 @@ Below shows the wireframe of the home page.
 
 ![wireframe][wireframe]
 
+<a name ="implementation"></a>
+## Visual Representation of App 
+
+## Home Page
+
+[home]: https://i.imgur.com/aXEKjCM.png
+
+![home][home]
 
