@@ -38,3 +38,7 @@ To create:
   3. Utilisation of Flask for front-end website and integrated API's
   4. Fully designed test suits for the CRUD Application including automated test
   5. Use of tools, methodologies and technologies which encapsulate all the core modules covered during training.
+
+<a name ="solution"></a>
+## My Solution
+My application is created using Boostrap, Jinja2 and Flask for the Front-End and MySQL for the Back-End Development.It is an e-commerce website where customers can shop both summer and winter tops. Depending on their requirements, they can also filter out summer and winter tops for displaying only relevant information that they are searching for, making the website user-friendly. The Admin/ Authentic user can insert new products onto the website, update their information and even delete them to accommodate the customers ever-changing demands.  
