@@ -73,3 +73,12 @@ This is my final ERD where I also added users table, so that only admin/authenti
 ## Website Sitemap
 
 ## Website Wireframe
+Wireframe was created to help arrange the elements on the website and to achieve the optimum outcome. The wireframe was created considering the project brief of creating a CRUD Application.
+
+Below shows the wireframe of the home page.
+
+[wireframe]: https://i.imgur.com/sYj0bJj.png
+
+![wireframe][wireframe]
+
+
