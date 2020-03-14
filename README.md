@@ -77,10 +77,15 @@ This is my final ERD where I also added users table, so that only admin/authenti
 
 ![finalerd][finalerd]
 
+<a name ="sitemap"></a>
+## Website Sitemap
+Sitemap was created which is a blueprint to show the structure of the website and how the pages are linked. 
+
+[sitemap]: https://i.imgur.com/FurcoTH.png
+
+![sitemap][sitemap]
 
 <a name ="wireframe"></a>
-## Website Sitemap
-
 ## Website Wireframe
 Wireframe was created to help arrange the elements on the website and to achieve the optimum outcome. The wireframe was created considering the project brief of creating a CRUD Application.
 
