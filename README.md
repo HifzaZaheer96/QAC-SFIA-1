@@ -9,9 +9,6 @@
 4. [Architecture](#architecture)
   + [Initial ERD](#initialERD)
   + [Final ERD](#finalERD)
-  + [Database Conceptual Design](#conceptualdesign)
-  + [Database Logical Design](#logicaldesign)
-  + [Database Physical Design](#physicaldesign)
   + [Wesbite Sitemap](#sitemap)
   + [Website Wireframe](#wireframe)
   
