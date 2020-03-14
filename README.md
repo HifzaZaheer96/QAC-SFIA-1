@@ -67,7 +67,7 @@ Below is the initial ERD for my project where I had minimum two tables "tops" an
 This is my final ERD where I also added users table, so that only admin/authentic user can add,update and delete tops from the webiste as I don't want anyone viewing my website to make such changes and therefore, this new table was added.
 
 
-[finalerd]:
+[finalerd]: https://i.imgur.com/sTSWUu4.png
 
 ![finalerd][finalerd]
 ## Website Sitemap
