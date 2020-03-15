@@ -163,3 +163,12 @@ Below shows the wireframe of the home page.
 
 ![deployment][deployment]
 
+## List of technologies used:
++ Trello Board - Project Planning and Tracking Board
++ MySQL - Relational Database for Application
++ Python - Coding in Flask
++ Flask - Framework
++ Testing - Pytest (Unit Testing, Coverage Testing)
++ Github Project - Version Control System
++ Google Cloud Platform (MySQL DB, GCP VM)
++ Jenkins - CI Server for Deploying the Application
