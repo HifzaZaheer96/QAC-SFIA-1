@@ -66,7 +66,16 @@ input[type=text]
   width: 500px;
 }
 
+.alert-primary
+{
+  background-color: white;
+  border-color: white;
+  width:400px;
+}
 
+.alert-dismissible {
+  padding-right: 0rem;
+}
 </style>
 <div class="row">
   <div class="row">
@@ -176,11 +185,16 @@ input[type=text]
 </div>
 <button  class="btn btn-primary" type="submit">Delete</button><br>
   <div class="alert alert-primary alert-dismissible"role="alert"> 
-    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+
     <span>{{ delete }}</span>
     </div>
 </form>
 </div>
+
+
+
+
+
 <div class = "createform">
 <form method="POST" action="{{ url_for('account_update') }}">
    
@@ -204,9 +218,9 @@ input[type=text]
 </div>
   <button  class="btn btn-primary" type="submit">Update </button>
   <div class="alert alert-primary alert-dismissible " role="alert">
-    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> 
 <span>{{ message }}</span>
 </div>
 </form>
 </div>
+
 {% endblock %}

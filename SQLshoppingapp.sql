@@ -50,8 +50,10 @@ CREATE TABLE `tops` (
 INSERT INTO tops (Top_Description, Top_Image,Top_Size, Top_Colour,Top_Price,Wardrobe_ID) 
 VALUES 
 ('Smock Chiffon Top','https://i.pinimg.com/originals/d4/e0/7f/d4e07fb33814fb2050da67aae88661cc.jpg','6','Pink','10', (SELECT Wardrobe_ID from wardrobe WHERE Wardrobe_ID = 1)),
-('Jersey T-shirt','https://img.ltwebstatic.com/images3_pi/2019/09/27/1569574094d7a0820ed3b28c55ae5a8248e5a33440_thumbnail_600x.webp','8','White','8', (SELECT Wardrobe_ID from wardrobe WHERE Wardrobe_ID = 2)), 
+('Jersey T-shirt','https://img.ltwebstatic.com/images3_pi/2019/09/27/1569574094d7a0820ed3b28c55ae5a8248e5a33440_thumbnail_600x.webp','8','White','8', (SELECT Wardrobe_ID from wardrobe WHERE Wardrobe_ID = 1)), 
 ('Jumper','https://m.media-amazon.com/images/I/61-yYdvj5gL._SR500,500_.jpg','12','Blue','20', (SELECT Wardrobe_ID from wardrobe WHERE Wardrobe_ID = 2)),
+('Sweatshirt','https://www.dhresource.com/webp/m/0x0s/f2-albu-g8-M00-65-A1-rBVaVFwJDfOAIpZxAAsOD1Q5y2w173.jpg/2019-women-039-s-clothing-winter-sweatershirts.jpg','6','Brown','30', (SELECT Wardrobe_ID from wardrobe WHERE Wardrobe_ID = 2)),
+('Raglan Sleeve Jumper','https://img.ltwebstatic.com/images3_pi/2019/10/31/1572507911dac54d6fb142d8ef08d845414b692803_thumbnail_600x.webp','6','White','15', (SELECT Wardrobe_ID from wardrobe WHERE Wardrobe_ID = 2)),
 ('Rose-Pink T-shirt','https://img.ltwebstatic.com/images2_pi/2019/07/03/1562143662675996227_thumbnail_600x799.webp','6','Red','25', (SELECT Wardrobe_ID from wardrobe WHERE Wardrobe_ID = 1));
 
 
