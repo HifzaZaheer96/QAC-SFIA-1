@@ -24,7 +24,7 @@
 
 9. [Authors](#authors)
 
-10. [Acknowledgements](#acknowledgements)
+10. [Acknowledgements](#acknowledgements) 
 
 
 <a name ="brief"></a>
