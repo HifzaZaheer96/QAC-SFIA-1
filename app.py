@@ -52,10 +52,10 @@ def account_delete():
             cur.close()
             for i in range(0,len(info)) :
                 if Top_Description == info[i][2]:
-                    variabless.delete = "Success"
+                    variabless.delete = "Successfully Deleted Top details!!"
                     return redirect (url_for('crud'))
                 else:
-                    variabless.delete = "Failure"
+                    variabless.delete = "Sorry!! Please enter matching Top Description!"
             return redirect (url_for('crud'))
 
 
@@ -126,11 +126,12 @@ def account_update():
             cur.close()
             for i in range(0,len(info)) :
                 if Top_Description == info[i][2]:
-                    variabless.message = "Success"
+                    variabless.message = "Successfully updated Top details!!"
                     return redirect (url_for('crud'))
                 else:
-                    variabless.message = "Failure"
+                    variabless.message = "Sorry!! Please enter matching Top Description!"
             return redirect (url_for('crud'))
+            
             
 
 
