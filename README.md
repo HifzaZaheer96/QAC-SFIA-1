@@ -146,3 +146,20 @@ Below shows the wireframe of the home page.
 [CRUD]: https://i.imgur.com/Yc5qxSj.png
 
 ![CRUD][CRUD]
+
+<a name ="testing"></a>
+## 6. Testing
+
+<a name ="unittesting"></a>
+## Unit Testing
+
+<a name ="covergaetesting"></a>
+## Coverage Testing
+
+<a name ="deployment"></a>
+## 7. Deployment
+
+[deployment]: https://i.imgur.com/1lKM2yE.png
+
+![deployment][deployment]
+
