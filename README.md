@@ -100,7 +100,49 @@ Below shows the wireframe of the home page.
 
 ## Home Page
 
-[home]: https://i.imgur.com/aXEKjCM.png
+[home]: https://i.imgur.com/kjeJE63.png
 
 ![home][home]
 
+## About Us Page
+
+[about]: https://i.imgur.com/jvlzXos.png
+
+![about][about]
+
+## Shop Summer Clothes Page
+
+[summer]: https://i.imgur.com/fpROzlI.png
+
+![summer][summer]
+
+## Shop Winter Clothes Page
+
+[winter]: https://i.imgur.com/nFhBjKT.png
+
+![winter][winter]
+
+
+## Contact Us Page
+
+[contact]: https://i.imgur.com/ORtegC2.png
+
+![contact][contact]
+
+## Registration Page
+
+[registration]: https://i.imgur.com/AuQ147L.png
+
+![registration][registration]
+
+## Login Page
+
+[login]: https://i.imgur.com/M6TkqyH.png
+
+![login][login]
+
+## CRUD Page
+
+[CRUD]: https://i.imgur.com/Yc5qxSj.png
+
+![CRUD][CRUD]
