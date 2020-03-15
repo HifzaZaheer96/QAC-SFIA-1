@@ -143,6 +143,6 @@ Below shows the wireframe of the home page.
 
 ## CRUD Page
 
-[CRUD]: 
+[CRUD]: https://i.imgur.com/Yc5qxSj.png
 
 ![CRUD][CRUD]
