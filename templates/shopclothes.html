@@ -48,36 +48,36 @@
 {% block body %}
 
 <div class="row">
-    <div class="row">
-      
-      {% for i in info1 %}
+  <div class="row">
+    
 
-      <div class="col-md-3 col-sm-3 col-xs-12 image-main-section">
-        <div class="row img-part">
-          <div class="col-md-12 col-sm-12 colxs-12 img-section">
-            <img src="{{i[1]}}">
-          </div>
-          <div class="col-md-12 col-sm-12 col-xs-12 image-title">
-            <h3>{{i[2]}}</h3>
-          </div>
-          <div class="col-md-12 col-sm-12 col-xs-12 image-description">
-            <p>Lorem ipsum dolor sed do eiusmod tempor incididunt ut labore et ...</p>
-          </div>
-          <div class="col-md-12 col-sm-12 col-xs-12 image-size">
-            <h3>{{i[3]}}</h3>
-          </div>
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <a href="#" class="btn btn-success add-cart-btn">ADD TO CART</a>
-            <a href="#" class="btn btn-success add-cart-btn">VIEW DETAILS</a>
-            <a href="#" class="btn btn-success add-cart-btn">UPDATE</a>
-          </div>
+    
+    {% for i in info1 %}
+
+    <div class="col-md-3 col-sm-3 col-xs-12 image-main-section">
+      <div class="row img-part">
+        <div class="col-md-12 col-sm-12 colxs-12 img-section">
+          <img src="{{i[1]}}">
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 image-title">
+          <h3>{{i[2]}}</h3>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 image-size">
+          <h3>Size: {{i[3]}}</h3>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 image-price">
+          <h4>Price: £{{i[5]}}</h4>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <a href="#"  class="add-to-cart btn btn-primary">ADD TO CART</a>
         </div>
       </div>
-
-      {% endfor %}
-
-
     </div>
+
+    {% endfor %}
+
+
   </div>
+</div>
 
   {% endblock %}
