@@ -100,7 +100,7 @@ Below shows the wireframe of the home page.
 
 ## Home Page
 
-[home]: https://i.imgur.com/aXEKjCM.png
+[home]: https://i.imgur.com/jvGJimh.png
 
 ![home][home]
 
