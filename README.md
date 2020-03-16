@@ -191,7 +191,7 @@ The Apply was deployed on Jenkins and Github. Github webhooks was also integrate
 
 Below is the diagram demonstrating the CI/CD Pipeline:
 
-[deployment]: https://i.imgur.com/1lKM2yE.png
+[deployment]: https://i.imgur.com/mKY9HBO.png
 
 ![deployment][deployment]
 
