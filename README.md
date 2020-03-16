@@ -187,6 +187,9 @@ Below shows the wireframe of the home page.
 
 <a name ="deployment"></a>
 ## 7. Deployment
+The Apply was deployed on Jenkins and Github. Github webhooks was also integrated to trigger the build whenever the developer commits any change to the branch. This way when webhook was added to the job, it ensured that the build was triggered automatically everytime the code is commited to the Github.
+
+Below is the diagram demonstrating the CI/CD Pipeline:
 
 [deployment]: https://i.imgur.com/1lKM2yE.png
 
