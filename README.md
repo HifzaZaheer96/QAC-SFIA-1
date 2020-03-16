@@ -3,6 +3,7 @@
   + [My Solution](#solution)
 2. [Trello Board](#trello)
   + [Initial Trello](#initialtrello)
+  + [Progress Trello](#progresstrello)
   + [Final Trello](#finaltrello)
 3. [Risk Assessment](#riskassessment)
 
@@ -39,6 +40,34 @@ To create:
 <a name ="solution"></a>
 ## My Solution
 My application is created using Boostrap, Jinja2 and Flask for the Front-End and MySQL for the Back-End Development.It is an e-commerce website where customers can shop both summer and winter tops. Depending on their requirements, they can also filter out summer and winter tops for displaying only relevant information that they are searching for, making the website user-friendly. The Admin/ Authentic user can insert new products onto the website, update their information and even delete them to accommodate the customers ever-changing demands.  
+
+<a name ="trello"></a>
+## 3. Trello Board
+Trello Board was used to plan, organize and prioritize my project so that not only all user requirements are fully met but to also meet project deadline. 
+
+<a name ="initialtrello"></a>
+### Inital Trello Board
+Initial Trello board has all the product backlog, sprint backlog which is then broken down into small and manageable tasks. Once each task is completed, it is then moved to Done and during that process if any errors were encountered, those were listed in bugs.
+
+[initialtrello]: https://i.imgur.com/27ruVX5.jpg
+
+![initialtrello][initialtrello]
+
+<a name ="progresstrello"></a>
+## Progress Trello Board
+
+[progresstrello]: https://i.imgur.com/DBRVLj8.png
+
+![progresstrello][progresstrello]
+
+
+<a name ="finaltrello"></a>
+## Final Trello Board
+
+[finaltrello]: https://i.imgur.com/dMhj7sx.png
+
+![finaltrello][finaltrello]
+
 
 <a name ="riskassessment"></a>
 ## 3. Risk Assessment
