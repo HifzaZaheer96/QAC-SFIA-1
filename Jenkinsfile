@@ -1,11 +1,12 @@
 pipeline {
     agent any
-    stages{
-        stage('Development Environment'){
-        steps{
-            sh 'echo "Hello Wold!"'
-            sh 'touch hifza.txt'
-        }
+    stages {
+        stage('Development Environment') {
+            steps {
+                sh 'chmod +x ./script/*'
+                sh './script/before_installation.sh'
+                sh './script/installation.sh'
+            }
         }
     }
 }
