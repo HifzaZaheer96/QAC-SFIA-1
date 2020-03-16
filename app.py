@@ -210,7 +210,7 @@ def login():
             cur.close()
             return render_template('login.html', message='username not found')
         cur.close()
-        flash("You've logged in!!!", 'success')
+        flash("You've successfully logged in!", 'success')
         return redirect('/crud')
     return render_template('login.html',title="Login")
 
@@ -219,7 +219,7 @@ def login():
 @app.route('/logout')
 def logout():
     session['login'] = False
-    flash("You have been logged out", 'info')
+    flash("You have been logged out!", 'info')
     return redirect('/login/')
 
 
