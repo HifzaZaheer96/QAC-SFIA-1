@@ -7,6 +7,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 app = Flask(__name__)
 
 
+
 app.config["MYSQL_HOST"] = os.environ['MYSQL']
 app.config["MYSQL_USER"] = os.environ['USER']
 app.config["MYSQL_PASSWORD"] = os.environ['PASSWORD']
