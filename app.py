@@ -81,7 +81,7 @@ def shopclothes():
     info = []
     for row in rows:
         info.append(row)
-    return render_template("shopclothes.html", info1=info,title="Summer Clothesssssss")
+    return render_template("shopclothes.html", info1=info,title="Summer Clothes")
     
 
 
