@@ -46,7 +46,7 @@ def home():
             mysql.connection.commit()
             cur.close()
             return redirect (url_for('home'))
-        return render_template("index.html" , title="Homee", info1=info, message= variabless.message, delete = variabless.delete)
+        return render_template("index.html" , title="Home", info1=info, message= variabless.message, delete = variabless.delete)
         #return redirect(url_for('home'))
 
 @app.route('/tops/delete' , methods=['GET', 'POST'])
