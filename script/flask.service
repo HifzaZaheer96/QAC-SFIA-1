@@ -1,0 +1,7 @@
+[Unit]
+Description=My Flask App
+[Service]
+User=jenkins
+ExecStart=/var/lib/jenkins/workspace/"Pipeline 1"/script/installation.sh
+[Install]
+WantedBy=multi-user.target

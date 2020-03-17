@@ -12,5 +12,3 @@ sudo apt-get install libmysqlclient-dev -y
 
 python3 -m venv venv
 
-
-
