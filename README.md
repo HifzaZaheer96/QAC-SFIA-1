@@ -205,16 +205,19 @@ Below is the diagram demonstrating the CI/CD Pipeline:
 
 
 Jenkins waiting to trigger the build once change was fully committed:
+
 [build]: https://i.imgur.com/8koPeTm.png
 
 ![build][build]
 
 Jenkins Build triggered automatically once change was committed:
+
 [build2]: https://i.imgur.com/w9SeLi9.png
 
 ![build2][build2]
 
 App Deployed successfully on Jenkins while automatically triggering build when code is committed to GitHub:
+
 [build3]: https://i.imgur.com/9AekqEx.png
 
 ![build3][build3]
