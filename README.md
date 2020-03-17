@@ -184,7 +184,7 @@ Two types of tests were carried out including unit testing and coverage testing.
 <a name ="unittesting"></a>
 ## Unit Testing
 + Testing URL to check whether the app has been deployed successfully and each web page is up and running. 
-+ Testing Database to ensure data gets inserted, updated and deleted successfully via the web application to ensure there are no errors runnung the Dynamic Web Application and to validate each unit of the software performs as it has been designed to do so.
++ Testing Database to ensure data gets inserted, updated and deleted successfully via the web application to ensure there are no errors runnung the Dynamic Web Application and to validate each unit of the software performs as it is designed to do so.
 
 
 <a name ="covergaetesting"></a>
