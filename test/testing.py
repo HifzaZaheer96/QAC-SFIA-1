@@ -1,8 +1,10 @@
 import urllib3
 from flask import Flask,render_template, request,redirect,url_for,flash, session
 from flask_mysqldb import MySQL
+from werkzeug.security import generate_password_hash, check_password_hash
 import os
-
+import pytest
+import tempfile
 
 app = Flask(__name__)
 
@@ -60,7 +62,7 @@ def test_nopage():
     r = http.request('GET','http://35.246.41.188:5000/crudoperation')
     assert 404 == r.status
   
-def test_db():
+def test_db_insert():
     with app.app_context():
         cur = mysql.connection.cursor()
         cur.execute("Select * from tops")                                  #this and next command will get records before update
@@ -74,3 +76,79 @@ def test_db():
     new_id = records_before[recordb-1][0]+1                                                      #finds the id of the previous record and + 1 for autoincrement new rec
     recorda = len(records_after) 
     assert (new_id,'https://img.ltwebstatic.com/images2_pi/2019/07/03/1562143662675996227_thumbnail_600x799.webp','Pinkshirt',6,'Red','25', 1) == records_after[recorda-1]                           #compares what should be there to most recent record
+
+
+
+def test_db_update():
+    with app.app_context():
+        cur = mysql.connection.cursor()
+        cur.execute("UPDATE tops SET Top_Size=(5) WHERE Top_Description = ('Smock Chiffon Top')")
+        mysql.connection.commit()         
+        cur.close()
+    assert ('5')
+
+
+
+# @pytest.mark.django_db
+# def test_my_user():
+#     me = USER.objects.get(username='HifzaZaheer96')
+#     assert me.is_superuser
+
+
+# def test_db_delete():
+#     with app.app_context():
+#         cur = mysql.connection.cursor()
+#         product = cur.execute("DELETE FROM tops WHERE Top_Description = ('Pinkshirt')")
+#         mysql.connection.commit()         
+#         cur.close()
+#         assert product is None
+
+# def test_db_login():
+#     with app.app_context():
+#         cur = mysql.connection.cursor()
+#         cur.execute("SELECT * FROM USER WHERE username = 'HifzaZaheer96'")
+#         mysql.connection.commit()         
+#         cur.close()
+
+#     assert ('HifzaZaheer96')
+
+
+# def test_db_login2():
+#     with app.app_context():
+#         cur = mysql.connection.cursor()
+#         cur.execute("SELECT * FROM USER WHERE username = 'HcccifzaZaheer96'")
+#         mysql.connection.commit()         
+#         cur.close()
+#     assert ('HcccifzaZaheer96')
+
+
+# def test_new_user(new_user):
+#     """
+#     GIVEN a User model
+#     WHEN a new User is created
+#     THEN check the email, hashed_password, authenticated, and role fields are defined correctly
+#     """
+#     assert new_user.username == 'HifzaZaheer96'
+#     assert new_user.hashed_password != 'It040496'
+#     assert not new_user.authenticated
+#     assert new_user.role == 'user'
+
+
+# @pytest.fixture
+# def client():
+#     db_fd, app.config['DATABASE'] = tempfile.mkstemp()
+#     app.config['TESTING'] = True
+
+#     with app.test_client() as client:
+#         with app.app_context():
+#             Flask.init_db()
+#         yield client
+
+#     os.close(db_fd)
+#     os.unlink(app.config['DATABASE'])
+
+# def test_empty_db(client):
+#     """Start with a blank database."""
+
+#     rv = client.get('/')
+#     assert b'No entries here so far' in rv.data
