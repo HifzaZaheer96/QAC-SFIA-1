@@ -101,7 +101,7 @@ def shopclotheswinter():
 
 @app.route('/contact')
 def contact():
-    return render_template("contact.html", title='About Us')
+    return render_template("contact.html", title='Contact Us')
 
 @app.route('/tops/update', methods=['GET', 'POST'])
 def account_update():
