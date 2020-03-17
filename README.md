@@ -233,3 +233,15 @@ Below is the diagram demonstrating the CI/CD Pipeline:
 + Github Project - Version Control System
 + Google Cloud Platform (MySQL DB, GCP VM)
 + Jenkins - CI Server for Deploying the Application
+
+<a name ="retrospective"></a>
+## 8. Retrospective
+
+
+<a name ="authors"></a>
+## 9. Authors
+
+Hifza Zaheer
+
+<a name ="acknowledgements"></a>
+## 10. Acknowledgements
