@@ -39,7 +39,7 @@ To create:
 
 <a name ="solution"></a>
 ## My Solution
-My application is created using Boostrap, Jinja2 and Flask for the Front-End and MySQL for the Back-End Development.It is an e-commerce website where customers can shop both summer and winter tops. Depending on their requirements, they can also filter out summer and winter tops for displaying only relevant information that they are searching for, making the website user-friendly. The Admin/ Authentic user can insert new products onto the website, update their information and even delete them to accommodate the customers ever-changing demands.  
+My application is created using Boostrap, Jinja2 and Flask for the Front-End and Python and MySQL for the Back-End Development.It is an e-commerce website where customers can shop both summer and winter tops. Depending on their requirements, they can also filter out summer and winter tops for displaying only relevant information that they are searching for, making the website user-friendly. The Admin/ Authentic user can insert new products onto the website, update their information and even delete them to accommodate the customers ever-changing demands.  
 
 <a name ="trello"></a>
 ## 3. Trello Board
@@ -195,7 +195,7 @@ Coverage Testing carried out to generate metric that will show how much of the s
  
 <a name ="deployment"></a>
 ## 7. Deployment
-The Apply was deployed on Jenkins and Github. Github webhooks was also integrated to trigger the build whenever the developer commits any change to the branch. This way when webhook was added to the job, it ensured that the build was triggered automatically everytime the code is commited to the Github.
+The Apply was deployed using Jenkins and Github. Github webhooks was also integrated to trigger the build whenever the developer commits any change to the branch. This way when webhook was added to the job, it ensured that the build was triggered automatically everytime the code is commited to the Github.
 
 Below is the diagram demonstrating the CI/CD Pipeline:
 
@@ -218,11 +218,20 @@ Below is the diagram demonstrating the CI/CD Pipeline:
 
 ![build2][build2]
 
-3. App Deployed successfully on Jenkins while automatically triggering build when code is committed to GitHub as well as triggering the testing phase which was done using Pytest:
+3. App Deployed successfully using Jenkins while automatically triggering build when code is committed to GitHub. Build process deploys the App onto the Development Environment and tests the App using Pytest:
 
 [build3]: https://i.imgur.com/9AekqEx.png
 
 ![build3][build3]
+
+## Software as a Service 
+Created Service which can monitor the application's status and runs tha application on the background.
+
+[service]: https://i.imgur.com/V9BgWbz.png
+
+![service][service]
+
+
 
 ## List of technologies used:
 + Trello Board - Project Planning and Tracking Board
