@@ -8,5 +8,13 @@ pipeline {
                 sh './script/make_service.sh'
             }
         }
+
+         stage('Testing'){
+            steps {
+                sh 'coverage run -m pytest test/testing.py'
+                sh 'coverage report'
+            }
+         }
     }
 }
+
