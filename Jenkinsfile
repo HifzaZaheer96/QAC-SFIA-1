@@ -8,13 +8,18 @@ pipeline {
                 sh './script/make_service.sh'
             }
         }
+        stage('Wait for installation'){
+            steps{
+                
+                sh 'sleep 60'
+               
+            }
+        }
 
          stage('Testing'){
             steps {
                 sh './script/testing.sh'
-                sh 'source /var/lib/jenkins/workspace/"Pipeline 1"/venv/bin/activate'
-                sh 'coverage run -m pytest test/testing.py'
-                sh 'coverage report'
+
             }
          }
     }
