@@ -79,15 +79,29 @@ def test_nopage():
 
 
 
-# def test_db_update():
-#     with app.app_context():
-#         cur = mysql.connection.cursor()
-#         cur.execute("SELECT Top_Description FROM tops WHERE Top_ID = 1")
-#         x = cur.fetchall()
-#         cur.execute("UPDATE tops SET Top_Size=(9) WHERE Top_Description = ('Smock Chiffon Top')")
-#         mysql.connection.commit()         
-#         cur.close()
-#     assert 'Smock Chiffon Top' == x
+def test_db_update_size():
+    with app.app_context():
+        cur = mysql.connection.cursor()
+        cur.execute("UPDATE tops SET Top_Size=(9) WHERE Top_ID = 1")
+        mysql.connection.commit() 
+        cur.execute("SELECT Top_Size FROM tops WHERE Top_ID = 1")
+        mysql.connection.commit()
+        x = [row[0] for row in cur.fetchall()]      
+        cur.close()
+        assert 9 == x[0]
+
+
+
+def test_db_update_price():
+    with app.app_context():
+        cur = mysql.connection.cursor()
+        cur.execute("UPDATE tops SET Top_Price=('10') WHERE Top_ID = 2")
+        mysql.connection.commit() 
+        cur.execute("SELECT Top_Price FROM tops WHERE Top_ID = 1")
+        mysql.connection.commit()
+        x = [row[0] for row in cur.fetchall()]      
+        cur.close()
+        assert ('10') == x[0]
 
 
 def test_db_insert2():
@@ -134,7 +148,7 @@ def test_db_select_tops():
         x = [row[2] for row in cur.fetchall()]
         mysql.connection.commit()         
         cur.close()
-        assert ['Jumper'] == x
+        assert ('Jumper') == x[0]
     
 
 def test_db_delete():
@@ -170,7 +184,7 @@ def test_avg_price():
         x = [row[0] for row in cur.fetchall()]
         mysql.connection.commit()         
         cur.close()
-        assert [18.0] == x
+        assert 18.333333333333332 == x[0]
 
 
 def test_minimum_size():
@@ -180,7 +194,7 @@ def test_minimum_size():
         x = [row[0] for row in cur.fetchall()]
         mysql.connection.commit()         
         cur.close()
-        assert [6] == x
+        assert 6 == x[0]
 
 def test_maximum_size():
     with app.app_context():
@@ -189,7 +203,7 @@ def test_maximum_size():
         x = [row[0] for row in cur.fetchall()]
         mysql.connection.commit()         
         cur.close()
-        assert [12] == x
+        assert 12 == x[0]
 
 def test_distinct_top_colour():
     with app.app_context():
@@ -205,16 +219,16 @@ def test_between_price():
         x = cur.execute("SELECT * FROM tops WHERE Top_Price BETWEEN 10 AND 25;")
         mysql.connection.commit()         
         cur.close()
-        assert 4 == x
+        assert 5 == x
         
 def test_between_price2():
     with app.app_context():
         cur = mysql.connection.cursor()
-        cur.execute("SELECT * FROM tops WHERE Top_Price BETWEEN 10 AND 20;")
-        x = [row[5] for row in cur.fetchall()]
-        mysql.connection.commit()         
+        cur.execute("SELECT COUNT(Top_Price) FROM tops WHERE Top_Price BETWEEN 10 AND 20;")
+        mysql.connection.commit()  
+        x = [row[0] for row in cur.fetchall()]      
         cur.close()
-        assert ['10','20','15'] == x
+        assert 4 == x[0]
 
 # def test_db_update():
 #     with app.app_context():
