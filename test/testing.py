@@ -4,7 +4,7 @@ from flask_mysqldb import MySQL
 from werkzeug.security import generate_password_hash, check_password_hash
 import os
 import pytest
-import tempfile
+
 
 app = Flask(__name__)
 
@@ -191,6 +191,30 @@ def test_maximum_size():
         cur.close()
         assert [12] == x
 
+def test_distinct_top_colour():
+    with app.app_context():
+        cur = mysql.connection.cursor()
+        x = cur.execute("SELECT DISTINCT Top_Colour FROM tops")
+        mysql.connection.commit()         
+        cur.close()
+        assert 5 == x
+
+def test_between_price():
+    with app.app_context():
+        cur = mysql.connection.cursor()
+        x = cur.execute("SELECT * FROM tops WHERE Top_Price BETWEEN 10 AND 25;")
+        mysql.connection.commit()         
+        cur.close()
+        assert 4 == x
+        
+def test_between_price2():
+    with app.app_context():
+        cur = mysql.connection.cursor()
+        cur.execute("SELECT * FROM tops WHERE Top_Price BETWEEN 10 AND 20;")
+        x = [row[5] for row in cur.fetchall()]
+        mysql.connection.commit()         
+        cur.close()
+        assert ['10','20','15'] == x
 
 # def test_db_update():
 #     with app.app_context():
