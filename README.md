@@ -223,7 +223,7 @@ Below shows all the testing/ queries carried out for Database:
 ![bothtest][bothtest]
 
 
-<a name ="covergaetesting"></a>
+<a name ="coveragetesting"></a>
 ## Coverage Testing
 Coverage Testing carried out to generate metric that will show how much of the source is tested to assess the test suite quality.
 
