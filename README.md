@@ -43,7 +43,7 @@ To create:
 My application is created using Boostrap, Jinja2 and Flask for the Front-End and Python and MySQL for the Back-End Development.It is an e-commerce website where customers can shop both summer and winter tops. Depending on their requirements, they can also filter out summer and winter tops for displaying only relevant information that they are searching for, making the website user-friendly. The Admin/ Authentic user can insert new products onto the website, update their information and even delete them to accommodate the customers ever-changing demands.  
 
 <a name ="trello"></a>
-## 3. Trello Board
+## 2. Trello Board
 Trello Board was used to plan, organize and prioritize my project so that not only all user requirements are fully met but to also meet project deadline. 
 
 
@@ -134,7 +134,7 @@ Below shows the wireframe of the home page.
 ![wireframe][wireframe]
 
 <a name ="implementation"></a>
-## Visual Representation of App 
+## 5. Visual Representation of App 
 
 ### Link to HZ Shopping App:
 http://35.246.41.188:5000/
