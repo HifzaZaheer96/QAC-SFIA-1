@@ -22,7 +22,7 @@
   
 7. [Deployment](#deployment)
 
-8. [Retrospective](#retrospective)
+8. [Retrospect](#retrospect)
 
 9. [Authors](#authors)
 
@@ -297,8 +297,20 @@ Created Service which can monitor the application's status and runs tha applicat
 + Google Cloud Platform (MySQL DB, GCP VM)
 + Jenkins - CI/CD Server for Deploying the Application
 
-<a name ="retrospective"></a>
-## 8. Retrospective
+<a name ="retrospect"></a>
+## 8. Retrospect
+
+Creating a Dynamic Web Application allowed me to understand all the aspects of website and database and how they are linked together using number of tools and technologies. The project went through number of phasese from planning, development, testing and deployment and through all these stages, I have learnt how to create App in Flask Framework, Jinja2 and Bootstrap while also learning python to create the App.
+
+My application has sucessfully met all the requirements and as CRUD Application was created where customers can view and buy tops whereas Admin can add, update and delete the items from the app which are then automatically processed on the database too as the web app being dynamic.
+
+I have used project management tools like Gannt Chart before, but using Trello was new experience which helped me track the progress of my project and it involved Product Backlog, Sprint Backlog, Tasks, Progress, Done and Bugs. Reviewing it regularly and updating it allowed me to be on track and to refer back to it when neeeded.
+
+I learnt CI/CD Pipleline and Jenkins is an example of it. Using Jenkins allowed me to auto trigger the build and test the Application. There were few issues that I faced, while using Jenkins as when I started testing the application, I came up with errors initially and but those were later fixed as I couldn't source the correct path on the Jenkinsfile and therefore, I created another sh file and added the path and other code in there and referenced it on the Jenkinsfile. It also couldn't find coverage command and kept throwing error and therefore, I removed venv and also restarted the flask service and it worked successfully.
+
+Also, I have carried out 35 tests for the Database and URL but the coverage testing displayed low metrics which was a bit of issue as I assumed the  more tests we carry out, the more source code would be tested. By importing more libraries, the results went down. 
+
+Overall,the project went very well and I have learnt and used a lot of new technologies.
 
 
 <a name ="authors"></a>
@@ -308,3 +320,5 @@ Hifza Zaheer
 
 <a name ="acknowledgements"></a>
 ## 10. Acknowledgements
+
+I acknowledge the help and support that I have receieve throughout my project, Special thanks to my tutor, Syed Ahmed for his guidance through each phase of the project which helped me achieve my potential.
