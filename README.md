@@ -286,7 +286,7 @@ Created Service which can monitor the application's status and runs tha applicat
 + Testing - Pytest (Unit Testing, Coverage Testing)
 + Github Project - Version Control System
 + Google Cloud Platform (MySQL DB, GCP VM)
-+ Jenkins - CI Server for Deploying the Application
++ Jenkins - CI/CD Server for Deploying the Application
 
 <a name ="retrospective"></a>
 ## 8. Retrospective
