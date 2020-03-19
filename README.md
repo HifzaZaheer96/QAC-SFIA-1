@@ -2,6 +2,7 @@
 1. [Brief](#brief)
   + [My Solution](#solution)
 2. [Trello Board](#trello)
+  + [User Stories](#userstories)
   + [Initial Trello](#initialtrello)
   + [Progress Trello](#progresstrello)
   + [Final Trello](#finaltrello)
@@ -44,6 +45,14 @@ My application is created using Boostrap, Jinja2 and Flask for the Front-End and
 <a name ="trello"></a>
 ## 3. Trello Board
 Trello Board was used to plan, organize and prioritize my project so that not only all user requirements are fully met but to also meet project deadline. 
+
+
+<a name ="userstories"></a>
+### User Stories
+
+[userstories]: https://i.imgur.com/uJSfu9o.png
+
+![userstories][userstories]
 
 <a name ="initialtrello"></a>
 ### Inital Trello Board
