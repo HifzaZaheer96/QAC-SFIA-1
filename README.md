@@ -186,13 +186,55 @@ Two types of tests were carried out including unit testing and coverage testing.
 + Testing URL to check whether the app has been deployed successfully and each web page is up and running. 
 + Testing Database to ensure data gets inserted, updated and deleted successfully via the web application to ensure there are no errors runnung the Dynamic Web Application and to validate each unit of the software performs as it is designed to do so.
 
+### Unit Testing URLs:
+All the web pages were tested and even pages that don't exist were tested too to ensure that the user can access what is accessible to them and can't access what is not accessible to them.
+
+Below shows the result of the URL Testing carried out:
+
+[urltest]: https://i.imgur.com/x3ROo6L.png
+
+![urltest][urltest]
+
+### Unit Testing Database:
+Database tested to allow user to input as desinged to, updating the dynamic web app, and testing whether user can delete the items created to ensure the database is fully functional and the CRUD results are reflected both on the Front- End (Website) and Back-End (Database) at the same time.
+
+Below shows all the testing/ queries carried out for Database:
+
+[dbtest]: https://i.imgur.com/cGjqh6K.png
+
+![dbtest][dbtest]
+
+### Combining both URL and Database Testing:
+
+[bothtest]: https://i.imgur.com/EyXumsn.png
+
+![bothtest][bothtest]
+
 
 <a name ="covergaetesting"></a>
 ## Coverage Testing
 Coverage Testing carried out to generate metric that will show how much of the source is tested to assess the test suite quality.
 
-
+### URL Coverage Testing:
  
+ [urlcoverage]: https://i.imgur.com/bZbU8GW.png
+
+![urlcoverage][urlcoverage]
+
+### Database Coverage Testing:
+ 
+  [dbcoverage]: https://i.imgur.com/EXQFTLs.png
+
+![dbcoverage][dbcoverage]
+
+
+### Combining both URL and Database Coverage Testing:
+ The coverage metrics went down when both URL and Database were tested together due to the complexity of the application and by importing more libraries.
+ 
+  [bothcoverage]: https://i.imgur.com/nqM4qQF.png
+
+![bothcoverage][bothcoverage]
+
 <a name ="deployment"></a>
 ## 7. Deployment
 The Apply was deployed using Jenkins and Github. Github webhooks was also integrated to trigger the build whenever the developer commits any change to the branch. This way when webhook was added to the job, it ensured that the build was triggered automatically everytime the code is commited to the Github.
