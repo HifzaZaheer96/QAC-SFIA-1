@@ -1,9 +1,8 @@
 import urllib3
-from flask import Flask,render_template, request,redirect,url_for,flash, session
+from flask import Flask
 from flask_mysqldb import MySQL
-from werkzeug.security import generate_password_hash, check_password_hash
 import os
-import pytest
+
 
 
 app = Flask(__name__)
@@ -104,10 +103,27 @@ def test_db_update_price():
         assert ('10') == x[0]
 
 
-def test_db_insert2():
+def test_db_insert():
     with app.app_context():
         cur = mysql.connection.cursor()
         num_of_records = cur.execute("INSERT INTO tops (Top_Description, Top_Image,Top_Size, Top_Colour,Top_Price,Wardrobe_ID) VALUES ('Pinkshirt','https://img.ltwebstatic.com/images2_pi/2019/07/03/1562143662675996227_thumbnail_600x799.webp','6','Red','25', '1')")
+        mysql.connection.commit()         
+        cur.close()
+        assert 1 == num_of_records 
+
+def test_db_insert_user():
+    with app.app_context():
+        cur = mysql.connection.cursor()
+        num_of_records = cur.execute("INSERT INTO USER (first_name, second_name,username, email,password) VALUES ('Mohammed','Zaheer','MZaheer','mzaheer@gmail.com','hellothere96')")
+        mysql.connection.commit()         
+        cur.close()
+        assert 1 == num_of_records 
+
+
+def test_db_delete_user():
+    with app.app_context():
+        cur = mysql.connection.cursor()
+        num_of_records = cur.execute("DELETE FROM USER WHERE username = ('MZaheer')")
         mysql.connection.commit()         
         cur.close()
         assert 1 == num_of_records 
@@ -120,6 +136,15 @@ def test_db_select():
         mysql.connection.commit()         
         cur.close()
         assert 7 == num_of_records 
+
+def test_db_select_OR():
+    with app.app_context():
+        cur = mysql.connection.cursor()
+        num_of_records = cur.execute("SELECT * FROM tops WHERE Top_Description = ('Jersey T-shirt   ') OR Top_Colour = ('White')")
+        mysql.connection.commit()         
+        cur.close()
+        assert 2 == num_of_records 
+
 
 
 def test_db_select_wardrobe():
@@ -149,7 +174,15 @@ def test_db_select_tops():
         mysql.connection.commit()         
         cur.close()
         assert ('Jumper') == x[0]
-    
+
+
+def test_db_select_tops_2():
+    with app.app_context():
+        cur = mysql.connection.cursor()
+        x = cur.execute("SELECT * FROM tops WHERE Top_Description = ('Raglan Sleeve Jumper') AND Top_Colour = ('White')")
+        mysql.connection.commit()         
+        cur.close()
+        assert 1 == x
 
 def test_db_delete():
     with app.app_context():
@@ -159,6 +192,15 @@ def test_db_delete():
         cur.close()
         assert 1 == num_of_records 
 
+def test_db_select_SUM():
+    with app.app_context():
+        cur = mysql.connection.cursor()
+        num_of_records = cur.execute("SELECT SUM(Top_Price) FROM tops")
+        mysql.connection.commit()
+        x = [row[0] for row in cur.fetchall()]      
+        cur.close()
+        assert (110.0) == x[0]         
+    
 
 def test_db_login():
     with app.app_context():
@@ -230,15 +272,7 @@ def test_between_price2():
         cur.close()
         assert 4 == x[0]
 
-# def test_db_update():
-#     with app.app_context():
-#         cur = mysql.connection.cursor()
-#         cur.execute("SELECT Top_Description FROM tops WHERE Top_ID = 1")
-#         x = cur.fetchall()
-#         cur.execute("UPDATE tops SET Top_Size=(9) WHERE Top_Description = ('Smock Chiffon Top')")
-#         mysql.connection.commit()         
-#         cur.close()
-#     assert 'Smock Chiffon Top' == x
+
 #   
 
 # @pytest.mark.django_db
@@ -248,23 +282,7 @@ def test_between_price2():
 
 
 
-# def test_db_login():
-#     with app.app_context():
-#         cur = mysql.connection.cursor()
-#         cur.execute("SELECT * FROM USER WHERE username = 'HifzaZaheer96'")
-#         mysql.connection.commit()         
-#         cur.close()
 
-#     assert ('HifzaZaheer96')
-
-
-# def test_db_login2():
-#     with app.app_context():
-#         cur = mysql.connection.cursor()
-#         cur.execute("SELECT * FROM USER WHERE username = 'HcccifzaZaheer96'")
-#         mysql.connection.commit()         
-#         cur.close()
-#     assert ('HcccifzaZaheer96')
 
 
 # def test_new_user(new_user):
