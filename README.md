@@ -127,6 +127,9 @@ Below shows the wireframe of the home page.
 <a name ="implementation"></a>
 ## Visual Representation of App 
 
+### Link to HZ Shopping App:
+http://35.246.41.188:5000/
+
 ## Home Page
 
 [home]: https://i.imgur.com/kjeJE63.png
