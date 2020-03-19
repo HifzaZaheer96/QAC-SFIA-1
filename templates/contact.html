@@ -1,0 +1,328 @@
+
+{% extends "layout.html" %}
+
+{% block body %}
+
+<style>
+
+.container4 {
+  background-color: white;
+  margin: 3em auto;
+  padding: 2em 3em 3em 4em;
+  width: 70%;
+}
+a {
+
+  border-bottom: 1px solid @interactioncolor;
+  color: @linkcolor;
+  &:hover, &:focus {
+    color: @interactioncolor;
+    border-bottom: none;
+  }
+}
+.intro {
+  font-size: 1.25em;
+}
+
+
+// Start styling ou panels
+
+.js .panel-title {
+  margin: 0;
+}
+
+.panel-title a {
+  border-bottom: none;
+  color: #292929;
+  display: block;
+  padding: 1.25em 0;
+  position: relative;
+  text-decoration: none;
+  transition: color 200ms ease 0s;
+  width: 100%;
+}
+  .icon {
+    color: #9e9e9e;
+    position:absolute;
+    right: 0;
+    transition: all 200ms ease 0s;
+  }  
+  &:hover, &:focus {
+    color:  white;
+	
+    .icon {
+      color: #ec407a;
+    }
+  
+  &.active {
+    color:  white;
+    .icon {
+      color: white;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.js .accordion {
+  border-bottom: 1px solid white;
+  margin: 2em 0;
+}
+
+.accordion .panel-title a {
+  border-top: 1px solid #ececec;
+}
+
+[id^="panel-"] {
+  padding-bottom: 2em;
+}
+
+.carousel-item img {
+  height: 600px;
+  width:100%;
+    }
+  .carousel-inner {
+  height: 600px;
+}
+.main-section
+{
+    background-color: #f1f1f1;
+    padding: 20px 20px 0px 20px;
+}
+.image-main-section
+{
+    margin-bottom:20px;
+   
+}
+.img-part
+{
+    border-radius: 5px;
+    margin:0px;
+    border:1px solid #DDDDDD;
+    background-color: #fff;
+    padding-bottom: 20px;
+    
+}
+.img-section
+{
+    padding: 5px;
+}
+.img-section img
+{
+    width: 100%;
+    height:340px;
+}
+.image-title h3
+{
+    margin:0px;
+    color:#4C4C4C;
+    padding: 15px 0px 8px 0px;
+}
+.image-description p
+{
+    color:#848484;
+}
+</style>
+
+
+<div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class = "carousel-image "src="https://d29qgt99bd79l1.cloudfront.net/20190723104322.jpg" alt="Dress Up">
+    </div>
+    </div>
+
+    <br> <br><br><br>
+    <div class="row">
+        <div class="row">
+          
+      
+      
+          <div class="col-md-4 col-sm-4 col-xs-12 image-main-section">
+            <div class="row img-part">
+              <div class="col-md-12 col-sm-12 colxs-12 img-section">
+                <img src="https://searchengineland.com/figz/wp-content/seloads/2011/10/Screen-shot-2011-10-25-at-3.56.07-AM1.png">
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 image-title">
+                <h3>Call Us</h3>
+                <p>
+                    Customer service centre
+029 2267 0000
+You can reach us from:
+
+8.30am to 6pm on Mondays to Fridays
+
+9am to 1pm on Saturdays
+
+If you're outside the UK, please call
+
++44 29 2267 0000   
+                </p>
+              </p>
+            </div>
+          </div>
+      
+          </div>
+      
+          <div class="col-md-4 col-sm-4 col-xs-12 image-main-section">
+            <div class="row img-part">
+              <div class="col-md-12 col-sm-12 colxs-12 img-section">
+                <img src="https://www.bluepencilindia.com/img/write1.jpg">
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 image-title">
+                <h3>Write To Us</h3>
+                <p>
+                    Head office
+Which?
+2 Marylebone Road
+London
+NW1 4DF
+
+
+
+<p>Phone:
+020 7770 7000
+9am to 5pm Mondays to Fridays</p>
+              </p>
+            </div>
+          </div>
+      
+          </div>
+      
+          <div class="col-md-4 col-sm-4 col-xs-12 image-main-section">
+            <div class="row img-part">
+              <div class="col-md-12 col-sm-12 colxs-12 img-section">
+                <img src="data:image/png;base64,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">
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 image-title">
+                <h3>Email Us</h3>
+                <p>
+                    For any further enquiries, please email us at:
+                </p>
+                <p>HZ@qa.com</p>
+              
+            </div>
+          </div>
+      
+          </div>
+          </div>
+          </div>
+
+
+<div class="container4">
+   
+     
+    <center> <h2>Frequently Asked Questions</h2></center>
+     <div class="accordion">
+       <h3 class="panel-title">Delivery Costs</h3>
+       <div class="panel-content">
+         <p>Delivery to the majority of UK addresses is free. This includes nominated day service and weekend delivery.</p>
+         <br>
+         <p>To certain remote locations delivery costs £10.</p>
+       </div>
+       <h3 class="panel-title">Where do you deliver to?</h3>
+       <div class="panel-content">
+         <p>We deliver to:
+             England
+             Northern Ireland
+             Scotland
+             Wales </p>
+       </div>
+     </div>
+     
+     <h3 class="panel-title">Returns and Exchanges</h3>
+     <div class="panel-content">
+       <p>You can return most products within 14 days
+ You can return or exchange almost anything you buy from us online or over the phone to all of our Carphone Warehouse stores. </p>
+ <br>
+ <p>Just let us know within 14 days from the day we deliver your product.</p>
+     </div>
+     
+     <h3 class="panel-title">What happens if I receive a faulty item?</h3>
+     <div class="panel-content">
+         <p>If you unfortunately receive a faulty item, please send it back to us within 30 days with a description of the fault, and we will process a full refund including the original delivery charge.</p> 
+        <p>Faulty items will be checked on receipt and validated.</p>
+        
+      </div>
+      
+      <h3 class="panel-title">When will I receive my Refund?</h3>
+      <div class="panel-content">
+      <p>We will process your return on the same day we receive your items, once it has been processed we will send you an email confirmation (please check your junk folder!) Your refund will go back via the payment method you used when placing your order.</p>
+    <p>Please allow up to 5 working days for your bank to process the refund.</p>
+</div>
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+  <script  src="js/functions.js"></script>
+   
+<script>
+		
+  // Hiding the panel content. If JS is inactive, content will be displayed
+  $( '.panel-content' ).hide();
+
+  // Preparing the DOM
+  
+  // -- Update the markup of accordion container 
+  $( '.accordion' ).attr({
+    role: 'tablist',
+    multiselectable: 'true'
+   });
+
+  // -- Adding ID, aria-labelled-by, role and aria-labelledby attributes to panel content
+  $( '.panel-content' ).attr( 'id', function( IDcount ) { 
+    return 'panel-' + IDcount; 
+  });
+  $( '.panel-content' ).attr( 'aria-labelledby', function( IDcount ) { 
+    return 'control-panel-' + IDcount; 
+  });
+  $( '.panel-content' ).attr( 'aria-hidden' , 'true' );
+  // ---- Only for accordion, add role tabpanel
+  $( '.accordion .panel-content' ).attr( 'role' , 'tabpanel' );
+  
+  // -- Wrapping panel title content with a <a href="">
+  $( '.panel-title' ).each(function(i){
+    
+    // ---- Need to identify the target, easy it's the immediate brother
+    $target = $(this).next( '.panel-content' )[0].id;
+    
+    // ---- Creating the link with aria and link it to the panel content
+    $link = $( '<a>', {
+      'href': '#' + $target,
+      'aria-expanded': 'false',
+      'aria-controls': $target,
+      'id' : 'control-' + $target
+    });
+    
+    // ---- Output the link
+    $(this).wrapInner($link);  
+    
+  });
+
+  // Optional : include an icon. Better in JS because without JS it have non-sense.
+  $( '.panel-title a' ).append('<span class="icon">+</span>');
+
+  // Now we can play with it
+  $( '.panel-title a' ).click(function() {
+    
+    if ($(this).attr( 'aria-expanded' ) == 'false'){ //If aria expanded is false then it's not opened and we want it opened !
+      
+      // -- Only for accordion effect (2 options) : comment or uncomment the one you want
+      
+      // ---- Option 1 : close only opened panel in the same accordion
+      //      search through the current Accordion container for opened panel and close it, remove class and change aria expanded value
+      $(this).parents( '.accordion' ).find( '[aria-expanded=true]' ).attr( 'aria-expanded' , false ).removeClass( 'active' ).parent().next( '.panel-content' ).slideUp(200).attr( 'aria-hidden' , 'true');
+
+      // Option 2 : close all opened panels in all accordion container
+      //$('.accordion .panel-title > a').attr('aria-expanded', false).removeClass('active').parent().next('.panel-content').slideUp(200);
+      
+      // Finally we open the panel, set class active for styling purpos on a and aria-expanded to "true"
+      $(this).attr( 'aria-expanded' , true ).addClass( 'active' ).parent().next( '.panel-content' ).slideDown(200).attr( 'aria-hidden' , 'false');
+
+    } else { // The current panel is opened and we want to close it
+
+      $(this).attr( 'aria-expanded' , false ).removeClass( 'active' ).parent().next( '.panel-content' ).slideUp(200).attr( 'aria-hidden' , 'true');;
+
+    }
+    // No Boing Boing
+    return false;
+  });
+
+ </script>
+
+      {% endblock %}

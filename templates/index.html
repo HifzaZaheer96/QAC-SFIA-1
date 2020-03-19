@@ -55,47 +55,12 @@
     border-radius:0px;
     font-size: 11px;
 }
-.createform
-{
-  width:500px;
-  padding:45px;
-}
 
-input[type=text]
- {
-  
-  left:60px;
-  width: 500px;
-}
-
-.show-cart li {
-  display: flex;
-}
-.card {
-  margin-bottom: 20px;
-}
-.card-img-top {
-  width: 200px;
-  height: 200px;
-  align-self: center;
-}
-
-
-
-.show-cart li {
-  display: flex;
-}
-.card {
-  margin-bottom: 20px;
-}
-.card-img-top {
-  width: 200px;
-  height: 200px;
-  align-self: center;
-}
 </style>
 
 
+<h6>Welcome to HZ, your shopping destination for fashion online. We offer fashion and quality at the best price in a more sustainable way.</h6>
+<br>
 
     <div id="demo" class="carousel slide" data-ride="carousel">
 
@@ -106,6 +71,7 @@ input[type=text]
           <li data-target="#demo" data-slide-to="2"></li>
         </ul>
       
+
         <!-- The slideshow -->
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -126,8 +92,10 @@ input[type=text]
         <a class="carousel-control-next" href="#demo" data-slide="next">
           <span class="carousel-control-next-icon"></span>
         </a>
+        
       
       </div>
+      
       
       
        
@@ -148,10 +116,8 @@ input[type=text]
       </div>
 
 
-    <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
-    <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
-    <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
-    <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+   
+
 
     
 
@@ -259,116 +225,6 @@ input[type=text]
           <!-- End -->
         </div>
       </div>
-      <!-- {% for post in posts %}
-      <div>
-          <h3>{{post.title}}</h3>
-          <p><b> - First name:</b>{{ post.name.first}}</p>
-          <p><b> - Last name:</b>{{ post.name.last}}</p>
-          <p> --{{ post.content}}</p>
-      </div>
-
-    
-      {% endfor %} -->
-
-      <div class = "createform">
-      <form method="POST" action="">
-        <H1>Create New Top </H1> <br>
-        <div class="form-group row">
-          <div class = "input-group">
-            <label class = "col-sm-5 col-form-label">Top Image</label> 
-            <div class="col-sm-2">
-            <input class="form-control" type = "text" name= "tpic" /> 
-            </div>
-            
-          </div>
-        </div>
-        <div class="form-group row">
-          <div class = "input-group">
-            <label class = "col-sm-5 col-form-label">Top Description</label> 
-            <div class="col-sm-2">
-         <input class="form-control" type = "text" name= "tname" />
-      </div>
-    </div>
-  </div>
-    <div class="form-group row">
-      <div class = "input-group">
-        <label class = "col-sm-5 col-form-label">Top Size</label>
-        <div class="col-sm-2">
-         <input class="form-control" type = "text" name = "tsize" /> 
-        </div>
-        
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class = "input-group">
-        <label class = "col-sm-5 col-form-label">Top Color</label>
-        <div class="col-sm-2">
-          <input class="form-control" type = "text" name = "tc" /> 
-        </div>
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class = "input-group">
-        <label class = "col-sm-5 col-form-label">Wardrobe ID</label>
-        <div class="col-sm-2">
-          <input class="form-control" type = "text" name = "wid" />
-        </div>
-        
-      </div>
-    </div>
-        <input  class="btn btn-primary" type = "submit">
-     
-      </form>
-     </div>
-
-     
-    <div class = "createform">
-    <form method="POST"  action="{{ url_for('account_delete') }}">
-      <H1>Delete your Top </H1> <br>
-      <div class="form-group row">
-        <div class = "input-group">
-          <label class = "col-sm-5 col-form-label">Top Description</label>
-          <div class="col-sm-2">
-            <input class="form-control" type = "text" name= "tname" /> 
-          </div>
-     
-  </div>
-</div>
-<button  class="btn btn-primary" type="submit">Delete</button><br>
-    <div class="alert alert-primary alert-dismissible"role="alert"> 
-      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-      <span>{{ delete }}</span>
-      </div>
-  </form>
-</div>
-<div class = "createform">
-  <form method="POST" action="{{ url_for('account_update') }}">
-     
-    <H1>Update your Top </H1> <br>
-    <div class="form-group row">
-      <div class = "input-group">
-        <label class = "col-sm-5 col-form-label">Top Description</label>
-        <div class="col-sm-2">
-         <input class="form-control"  type = "text" name= "tname" />
-        </div>
-  </div>
-</div>
-<div class="form-group row">
-  <div class = "input-group">
-    <label class = "col-sm-5 col-form-label">Top Size</label>
-    <div class="col-sm-2">
-     <input class="form-control"   type = "text" name = "tsize" /> 
-    </div>
-     
-  </div>
-</div>
-    <button  class="btn btn-primary" type="submit">Update </button>
-    <div class="alert alert-primary alert-dismissible " role="alert">
-      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> 
- <span>{{ message }}</span>
-</div>
-  </form>
-</div>
-
+ 
     {% endblock %}
 

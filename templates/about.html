@@ -2,31 +2,124 @@
 {% extends "layout.html" %}
 
 {% block body %}
-
 <style>
-
-</style>
-
+    .carousel-item img {
+  height: 600px;
+  width:100%;
+    }
+  .carousel-inner {
+  height: 600px;
+}
+.main-section
+{
+    background-color: #f1f1f1;
+    padding: 20px 20px 0px 20px;
+}
+.image-main-section
+{
+    margin-bottom:20px;
    
-      
+}
+.img-part
+{
+    border-radius: 5px;
+    margin:0px;
+    border:1px solid #DDDDDD;
+    background-color: #fff;
+    padding-bottom: 20px;
+    
+}
+.img-section
+{
+    padding: 5px;
+}
+.img-section img
+{
+    width: 100%;
+    height:340px;
+}
+.image-title h3
+{
+    margin:0px;
+    color:#4C4C4C;
+    padding: 15px 0px 8px 0px;
+}
+.image-description p
+{
+    color:#848484;
+}
+</style>
+<div class="carousel-inner">
+<div class="carousel-item active">
+  <img class = "carousel-image "src="https://www.theloftpreloved.co.uk/ekmps/shops/2328ea/resources/Design/ice-cream-party-2-.png" alt="Dress Up">
+</div>
+</div>
+
+<br><br><br>
+
+<div class="row">
+  <div class="row">
     
 
 
-    <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
-    <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
-    <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
-    <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
- 
-    
-
-
-      {% for post in posts %}
-      <div>
-          <h3>{{post.title}}</h3>
-          <p><b> - First name:</b>{{ post.name.first}}</p>
-          <p><b> - Last name:</b>{{ post.name.last}}</p>
-          <p> --{{ post.content}}</p>
+    <div class="col-md-4 col-sm-4 col-xs-12 image-main-section">
+      <div class="row img-part">
+        <div class="col-md-12 col-sm-12 colxs-12 img-section">
+          <img src="https://mi-linux.wlv.ac.uk/~1823810/image/about1-.fw">
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 image-title">
+          <h3></h3>
+          <p>We are a value-driven & customer-focused
+            fashion company. For us, fashion, fun & action are essential. We are
+            defined by “the HZ way”: our culture & values reflect heart & soul of HZ.
+           </p>
+        </p>
       </div>
-      {% endfor %}
+    </div>
+
+    </div>
+
+    <div class="col-md-4 col-sm-4 col-xs-12 image-main-section">
+      <div class="row img-part">
+        <div class="col-md-12 col-sm-12 colxs-12 img-section">
+          <img src="https://i0.wp.com/cliffitsolutions.com/wp-content/uploads/2014/09/what-we-do-main-btn.jpg?w=290&ssl=1">
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 image-title">
+          <h3></h3>
+          <p>We deliver our business concept
+            – fashion and quality at the best price –
+            to everyone, and we do so in a sustainable
+            way – today, tomorrow and in the future.</p>
+        </p>
+      </div>
+    </div>
+
+    </div>
+
+    <div class="col-md-4 col-sm-4 col-xs-12 image-main-section">
+      <div class="row img-part">
+        <div class="col-md-12 col-sm-12 colxs-12 img-section">
+          <img src="https://i.ytimg.com/vi/OD329lTPkxE/maxresdefault.jpg">
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 image-title">
+          <h3></h3>
+          We believe in people
+          We are one team
+          Constant improvement
+          Straightforward and open-minded
+          Entrepreneurial spirit
+          Keep it simple
+          Cost-conscious
+        </p>
+      </div>
+    </div>
+
+    </div>
+    </div>
+    </div>
+    
+
+
+    
     {% endblock %}
 
