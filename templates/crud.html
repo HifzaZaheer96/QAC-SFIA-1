@@ -120,7 +120,6 @@ input[type=text]
           <div class="col-sm-2">
           <input class="form-control" type = "text" name= "tpic" /> 
           </div>
-          
         </div>
       </div>
       <div class="form-group row">
@@ -166,61 +165,51 @@ input[type=text]
     </div>
   </div>
       <input  class="btn btn-primary" type = "submit">
-   
     </form>
    </div>
-
-   
   <div class = "createform">
-  <form method="POST"  action="{{ url_for('account_delete') }}">
-    <H1>Delete your Top </H1> <br>
+    <form method="POST"  action="{{ url_for('account_delete') }}">
+      <H1>Delete your Top </H1> <br>
+      <div class="form-group row">
+        <div class = "input-group">
+          <label class = "col-sm-5 col-form-label">Top Description</label>
+          <div class="col-sm-2">
+            <input class="form-control" type = "text" name= "tname" /> 
+          </div>
+        </div>
+      </div>
+      <button  class="btn btn-primary" type="submit">Delete</button><br>
+      <div class="alert alert-primary alert-dismissible"role="alert"> 
+        <span>{{ delete }}</span>
+      </div>
+  </form>
+</div>
+
+
+<div class = "createform">
+  <form method="POST" action="{{ url_for('account_update') }}">
+    <H1>Update your Top </H1> <br>
     <div class="form-group row">
       <div class = "input-group">
         <label class = "col-sm-5 col-form-label">Top Description</label>
         <div class="col-sm-2">
-          <input class="form-control" type = "text" name= "tname" /> 
+        <input class="form-control"  type = "text" name= "tname" />
         </div>
-   
-</div>
-</div>
-<button  class="btn btn-primary" type="submit">Delete</button><br>
-  <div class="alert alert-primary alert-dismissible"role="alert"> 
-
-    <span>{{ delete }}</span>
-    </div>
-</form>
-</div>
-
-
-
-
-
-<div class = "createform">
-<form method="POST" action="{{ url_for('account_update') }}">
-   
-  <H1>Update your Top </H1> <br>
-  <div class="form-group row">
-    <div class = "input-group">
-      <label class = "col-sm-5 col-form-label">Top Description</label>
-      <div class="col-sm-2">
-       <input class="form-control"  type = "text" name= "tname" />
       </div>
-</div>
-</div>
-<div class="form-group row">
-<div class = "input-group">
-  <label class = "col-sm-5 col-form-label">Top Size</label>
-  <div class="col-sm-2">
-   <input class="form-control"   type = "text" name = "tsize" /> 
-  </div>
-   
-</div>
-</div>
-  <button  class="btn btn-primary" type="submit">Update </button>
-  <div class="alert alert-primary alert-dismissible " role="alert">
-<span>{{ message }}</span>
-</div>
-</form>
+    </div>
+    <div class="form-group row">
+      <div class = "input-group">
+        <label class = "col-sm-5 col-form-label">Top Size</label>
+        <div class="col-sm-2">
+        <input class="form-control"   type = "text" name = "tsize" /> 
+        </div>
+      </div>
+    </div>
+      <button  class="btn btn-primary" type="submit">Update </button>
+      <div class="alert alert-primary alert-dismissible " role="alert">
+        <span>{{ message }}</span>
+      </div>
+  </form>
 </div>
 
 
