@@ -58,13 +58,6 @@ def account_delete():
             return redirect (url_for('crud'))
 
 
-            # for i in info[2] :
-            #     if Top_Description == i:
-            #         return render_template("index.html", title="Home", info1=info)
-            #     return redirect (url_for('home'))
-            # return render_template("index.html", title="Home", info1=info,messagesuccess = "Successfully deleted the information")
-
-
 @app.route('/about')
 def about():
     return render_template("about.html", title='About Us')
