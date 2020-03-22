@@ -7,57 +7,50 @@
 </div>
 
 <div class = "createform">
-<form class ="form-horizontal" method="POST">
-    <div class="form-group">
-        <div class = "input-group">
-          <label class="control-label col-sm-2">First Name</label>  
+    <form class ="form-horizontal" method="POST">
+        <div class="form-group">
+            <div class = "input-group">
+                <label class="control-label col-sm-2">First Name</label>  
+            </div>
+            <div class="col-sm-5">
+                <input class="form-control" type="text" name="first_name"/>
+            </div>
         </div>
-    <div class="col-sm-5">
-        <input class="form-control" type="text" name="first_name"/>
-    </div>
-</div>
-
-    <div class="form-group">
-    <label class="control-label col-sm-2">Last Name</label>
-        <div class="col-sm-5">
-            <input class="form-control" type="text" name="second_name"/>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Last Name</label>
+            <div class="col-sm-5">
+                <input class="form-control" type="text" name="second_name"/>
+            </div>
         </div>
-    </div>
-
-<div class="form-group">
-    <label class="control-label col-sm-2">Username</label>
-    <div class="col-sm-5">
-        <input class="form-control" type="text" name="username"/>
-    </div>
-</div>
-
-    <div class="form-group">
-        <label class="control-label col-sm-2">Email</label>
-        <div class="col-sm-5">
-            <input class="form-control" type="email" name="email"/>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Username</label>
+            <div class="col-sm-5">
+                <input class="form-control" type="text" name="username"/>
+            </div>
         </div>
-    </div>
-
-<div class="form-group">
-    <label class="control-label col-sm-2">Password</label>
-    <div class="col-sm-5">
-        <input class="form-control" type="password" name="password"/>
-    </div>
-</div>
-
-<div class="form-group">
-    <label class="control-label col-sm-2">Confirm Password</label>
-    <div class="col-sm-5">
-        <input class="form-control" type="password" name="confirm_password"/>
-    </div>
-</div>
-
-<div class="form-group">
-    <label class="col-sm-offset-2 col-sm-10">
-        <button class="btn btn-primary" type="Submit">Submit </button>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Email</label>
+            <div class="col-sm-5">
+                <input class="form-control" type="email" name="email"/>
+            </div>
         </div>
-    </div>
-</form>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Password</label>
+            <div class="col-sm-5">
+                <input class="form-control" type="password" name="password"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Confirm Password</label>
+            <div class="col-sm-5">
+                <input class="form-control" type="password" name="confirm_password"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-offset-2 col-sm-10">
+            <button class="btn btn-primary" type="Submit">Submit </button>
+        </div>
+    </form>
 </div>
 
 {% endblock %}

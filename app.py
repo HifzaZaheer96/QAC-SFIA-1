@@ -6,8 +6,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 
-
-
 app.config["MYSQL_HOST"] = os.environ['MYSQL']
 app.config["MYSQL_USER"] = os.environ['USER']
 app.config["MYSQL_PASSWORD"] = os.environ['PASSWORD']
@@ -223,10 +221,5 @@ def logout():
     return redirect('/login/')
 
 
-
 if __name__ == "__main__":
     app.run('0.0.0.0',debug=True)
-
-
-#   return redirect(url_for('index'))
-#     return render_template('add.html', form = form)
