@@ -16,7 +16,7 @@ Flask==1.1.1
 Flask-MySQLdb==0.2.0
 Flask-SQLAlchemy==2.4.1
 google-compute-engine==20190801.0
-httplib2==0.9.2
+httplib2==0.18.0
 hyperlink==17.3.1
 idna==2.6
 incremental==16.10.1
